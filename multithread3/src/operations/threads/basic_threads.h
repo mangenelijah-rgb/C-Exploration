@@ -8,11 +8,13 @@
 typedef struct {
     Queue *q;
     const char *filename;
+    unsigned int count;
 } ProducerData;
 
 typedef struct {
     Queue *q;
     const char *filename;
+    unsigned int count;
 } ConsumerData;
 
 void* producer(void *producerData);

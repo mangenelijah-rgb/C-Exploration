@@ -14,7 +14,7 @@ typedef struct {
 } Queue;
 
 void initQueue(Queue* q);
-bool enqueue(Queue* q, int* value);
+bool enqueue(Queue* q, int value);
 bool dequeue(Queue* q, int* value);
 
 #endif

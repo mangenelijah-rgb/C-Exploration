@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
+#include <unistd.h>
 #include "basic_threads.h"
+#include "clock.h"
 
 void* producer(void *producerData) {
     ProducerData *data = (ProducerData *)producerData;
@@ -12,26 +14,17 @@ void* producer(void *producerData) {
         pthread_exit(NULL);
     }
 
-    int val;
-    int i;
-    int j = 60;
     srand(0);
-
-    while (j--) {
-        fprintf(file, "Number of items in queue: %d\n\n", q->size);
-        fprintf(file, "============\n");
-
-        i = (rand() % 5) + 1;
-        while (i--) {
-            val = (rand() % 500) + 101;
-            if (!enqueue(q, &val)) {
-                fprintf(file, "---->Queue full\n");
-                break;
-            }
-            fprintf(file, "Enqueued %d\n", val);
+    unsigned int i = 0;
+    while (i < data->count) {
+        if (!enqueue(q, i + 1)) {
+            fprintf(file, "Queue full at %lld ms\n", elapsed());
+            usleep(1000 * (rand() % 20)); //Sleep for a random amount from 0 to 20 milliseconds
+            continue;
         }
-        fprintf(file, "============\n\n");
+        fprintf(file, "Enqueued %u at %lld ms\n", i++, elapsed());
         fflush(file);
+        usleep(1000 * (rand() % 20)); //Sleep for a random amount from 0 to 20 milliseconds
     }
     fclose(file);
     pthread_exit(NULL);
@@ -47,24 +40,18 @@ void* consumer(void *consumerData) {
     }
 
     int val;
-    int i;
-    int j = 60;
     srand(0);
-
-    while (j--) {
-        fprintf(file, "Number of items in queue: %d\n\n", q->size);
-        fprintf(file, "============\n");
-
-        i = (rand() % 5) + 1;
-        while (i--) {
-            if (!dequeue(q, &val)) {
-                fprintf(file, "---->Queue full\n");
-                break;
-            }
-            fprintf(file, "Dequeued %d\n", val);
+    unsigned int i = 0;
+    while (i < data->count) {
+        if (!dequeue(q, &val)) {
+            fprintf(file, "Queue empty at %lld ms\n", elapsed());
+            usleep(1000 * (rand() % 20)); //Sleep for a random amount from 0 to 20 milliseconds
+            continue;
         }
-        fprintf(file, "============\n\n");
+        fprintf(file, "Dequeued %u at %lld ms\n", val, elapsed());
+        i++;
         fflush(file);
+        usleep(1000 * (rand() % 20)); //Sleep for a random amount from 0 to 20 milliseconds
     }
     fclose(file);
     pthread_exit(NULL);

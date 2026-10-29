@@ -10,14 +10,14 @@ void initQueue(Queue* q) {
     pthread_mutex_init(&q->lock, NULL);
 }
 
-bool enqueue(Queue* q, int* value) {
+bool enqueue(Queue* q, int value) {
     pthread_mutex_lock(&q->lock);
     if (q->size == MAX_ITEMS) {
         pthread_mutex_unlock(&q->lock);
         return false;
     }
     q->tail = (q->tail + 1) % MAX_ITEMS;
-    q->items[q->tail] = *value;
+    q->items[q->tail] = value;
     q->size++;
     pthread_mutex_unlock(&q->lock);
     return true;
