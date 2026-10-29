@@ -1,0 +1,474 @@
+Number of items in queue: 0
+
+============
+---->Queue full
+============
+
+Number of items in queue: 2
+
+============
+Dequeued 378
+Dequeued 516
+Dequeued 436
+============
+
+Number of items in queue: 6
+
+============
+Dequeued 487
+Dequeued 250
+Dequeued 522
+Dequeued 128
+============
+
+Number of items in queue: 4
+
+============
+Dequeued 291
+Dequeued 160
+Dequeued 141
+============
+
+Number of items in queue: 3
+
+============
+Dequeued 527
+Dequeued 312
+Dequeued 469
+============
+
+Number of items in queue: 5
+
+============
+Dequeued 383
+============
+
+Number of items in queue: 6
+
+============
+Dequeued 131
+Dequeued 463
+Dequeued 224
+Dequeued 168
+Dequeued 403
+============
+
+Number of items in queue: 6
+
+============
+Dequeued 123
+Dequeued 159
+Dequeued 268
+Dequeued 494
+Dequeued 112
+============
+
+Number of items in queue: 5
+
+============
+Dequeued 143
+Dequeued 522
+Dequeued 520
+Dequeued 385
+============
+
+Number of items in queue: 6
+
+============
+Dequeued 138
+============
+
+Number of items in queue: 7
+
+============
+Dequeued 416
+============
+
+Number of items in queue: 8
+
+============
+Dequeued 471
+============
+
+Number of items in queue: 12
+
+============
+Dequeued 514
+Dequeued 127
+Dequeued 192
+Dequeued 474
+============
+
+Number of items in queue: 11
+
+============
+Dequeued 463
+============
+
+Number of items in queue: 15
+
+============
+Dequeued 382
+Dequeued 406
+Dequeued 428
+============
+
+Number of items in queue: 15
+
+============
+Dequeued 437
+Dequeued 106
+Dequeued 447
+Dequeued 330
+============
+
+Number of items in queue: 12
+
+============
+Dequeued 225
+Dequeued 496
+Dequeued 183
+Dequeued 468
+Dequeued 535
+============
+
+Number of items in queue: 9
+
+============
+Dequeued 465
+============
+
+Number of items in queue: 10
+
+============
+Dequeued 144
+Dequeued 351
+Dequeued 377
+============
+
+Number of items in queue: 9
+
+============
+Dequeued 279
+Dequeued 389
+Dequeued 185
+Dequeued 500
+Dequeued 533
+============
+
+Number of items in queue: 5
+
+============
+Dequeued 469
+Dequeued 340
+Dequeued 187
+Dequeued 195
+Dequeued 171
+============
+
+Number of items in queue: 4
+
+============
+Dequeued 568
+Dequeued 202
+Dequeued 198
+============
+
+Number of items in queue: 4
+
+============
+Dequeued 503
+============
+
+Number of items in queue: 5
+
+============
+Dequeued 253
+Dequeued 357
+Dequeued 402
+Dequeued 542
+Dequeued 466
+============
+
+Number of items in queue: 5
+
+============
+Dequeued 220
+Dequeued 541
+Dequeued 330
+============
+
+Number of items in queue: 4
+
+============
+Dequeued 132
+Dequeued 218
+Dequeued 582
+Dequeued 276
+---->Queue full
+============
+
+Number of items in queue: 3
+
+============
+Dequeued 168
+Dequeued 457
+Dequeued 598
+---->Queue full
+============
+
+Number of items in queue: 2
+
+============
+Dequeued 566
+Dequeued 407
+---->Queue full
+============
+
+Number of items in queue: 5
+
+============
+Dequeued 225
+Dequeued 129
+Dequeued 472
+Dequeued 333
+============
+
+Number of items in queue: 6
+
+============
+Dequeued 430
+Dequeued 371
+Dequeued 469
+Dequeued 309
+Dequeued 316
+============
+
+Number of items in queue: 3
+
+============
+Dequeued 441
+============
+
+Number of items in queue: 2
+
+============
+Dequeued 324
+Dequeued 219
+============
+
+Number of items in queue: 2
+
+============
+Dequeued 552
+Dequeued 156
+---->Queue full
+============
+
+Number of items in queue: 4
+
+============
+Dequeued 365
+Dequeued 329
+Dequeued 442
+Dequeued 451
+============
+
+Number of items in queue: 1
+
+============
+Dequeued 135
+---->Queue full
+============
+
+Number of items in queue: 5
+
+============
+Dequeued 515
+Dequeued 588
+Dequeued 457
+============
+
+Number of items in queue: 3
+
+============
+Dequeued 344
+Dequeued 592
+============
+
+Number of items in queue: 4
+
+============
+Dequeued 460
+============
+
+Number of items in queue: 6
+
+============
+Dequeued 152
+============
+
+Number of items in queue: 10
+
+============
+Dequeued 538
+Dequeued 329
+Dequeued 575
+Dequeued 222
+============
+
+Number of items in queue: 8
+
+============
+Dequeued 459
+Dequeued 338
+============
+
+Number of items in queue: 11
+
+============
+Dequeued 336
+============
+
+Number of items in queue: 12
+
+============
+Dequeued 394
+Dequeued 419
+Dequeued 529
+============
+
+Number of items in queue: 13
+
+============
+Dequeued 529
+============
+
+Number of items in queue: 17
+
+============
+Dequeued 130
+Dequeued 544
+Dequeued 364
+Dequeued 214
+Dequeued 139
+============
+
+Number of items in queue: 13
+
+============
+Dequeued 207
+Dequeued 419
+Dequeued 229
+Dequeued 289
+Dequeued 470
+============
+
+Number of items in queue: 13
+
+============
+Dequeued 518
+Dequeued 425
+Dequeued 344
+============
+
+Number of items in queue: 13
+
+============
+Dequeued 591
+Dequeued 600
+============
+
+Number of items in queue: 14
+
+============
+Dequeued 373
+Dequeued 326
+============
+
+Number of items in queue: 16
+
+============
+Dequeued 106
+============
+
+Number of items in queue: 17
+
+============
+Dequeued 387
+Dequeued 270
+Dequeued 183
+Dequeued 143
+============
+
+Number of items in queue: 14
+
+============
+Dequeued 565
+Dequeued 456
+============
+
+Number of items in queue: 17
+
+============
+Dequeued 405
+Dequeued 449
+Dequeued 429
+============
+
+Number of items in queue: 18
+
+============
+Dequeued 400
+============
+
+Number of items in queue: 19
+
+============
+Dequeued 444
+Dequeued 441
+Dequeued 523
+Dequeued 412
+Dequeued 411
+============
+
+Number of items in queue: 15
+
+============
+Dequeued 262
+Dequeued 331
+============
+
+Number of items in queue: 17
+
+============
+Dequeued 421
+Dequeued 227
+Dequeued 123
+Dequeued 566
+Dequeued 309
+============
+
+Number of items in queue: 13
+
+============
+Dequeued 517
+Dequeued 525
+Dequeued 238
+Dequeued 163
+Dequeued 225
+============
+
+Number of items in queue: 14
+
+============
+Dequeued 553
+Dequeued 500
+============
+
+Number of items in queue: 15
+
+============
+Dequeued 569
+============
+
