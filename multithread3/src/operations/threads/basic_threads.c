@@ -30,6 +30,7 @@ void* threadWrapper(void *arguments) {
         task->function(task->arguments);
     }
 
+    task->list->threads[task->threadIndex].flags |= (1 << 0);
     free(task);
     pthread_exit(NULL);
 }

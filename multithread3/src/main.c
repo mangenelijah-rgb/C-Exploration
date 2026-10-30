@@ -27,41 +27,36 @@ int main() {
     consumerData1.count = 1000;
 
     thread_init(&list, producer, &producerData1);
-    thread_init(&list, consumer, &consumerData1);
+    thread_init(&list, consumer, &consumerData1); 
 
-    // pthread_t producerId;
-    // if (pthread_create(&producerId, NULL, producer, &producerData1) != 0) {
-    //     perror("Couldn\'t spin producer thread\n");
-    //     return 1;
-    // }
-    // printf("Producer 1 ID: %lu\n", (unsigned long)producerId);
-    
-    // pthread_t consumerId;
-    // if (pthread_create(&consumerId, NULL, consumer, &consumerData1) != 0) {
-    //     perror("Couldn\'t spin consumer thread\n");
-    //     return 1;
-    // }
-    // printf("Consumer 1 ID: %lu\n", (unsigned long)consumerId);
-
-    
-    for (int i = 0; i < MAX_THREADS; i++) {
+    bool running = true;
+    while (running) {
+        pthread_mutex_lock(&q.lock);
+        printf("Queue state at %llu ms: ", elapsed());
+        for (int i = 0; i < q.size; i++) {
+            printf("%d ", q.items[(i + q.front) % MAX_ITEMS]);
+        }
+        pthread_mutex_unlock(&q.lock);
+        printf("\n");
+        running = false;
         pthread_mutex_lock(&list.lock);
-        if ((list.used_thread_flags & (1 << i))) {
-            if (pthread_join(list.threads[i].id, NULL) != 0) {
-                perror("Failed to join thread\n");
-                return 1;
+        for (int i = 0; i < MAX_THREADS; i++) {
+            if ((list.used_thread_flags & (1 << i))) {
+                if (list.threads[i].flags & (1 << 0)) {
+                    if (pthread_join(list.threads[i].id, NULL) != 0) {
+                        perror("Failed to join thread\n");
+                        return 1;
+                    }
+                    list.used_thread_flags &= ~(1 << i);
+                    printf("Joined thread %d at %llu ms\n", i, elapsed());
+                    continue;
+                }
+                running = true;
             }
-            list.used_thread_flags &= ~(1 << i);
-            printf("Joined thread %d at %llu ms\n", i, elapsed());
         }
         pthread_mutex_unlock(&list.lock);
+        sleep(1);
     }
-
-    printf("Queue state: ");
-    for (int i = 0; i < q.size; i++) {
-        printf("%d ", q.items[(i + q.front) % MAX_ITEMS]);
-    }
-    printf("\n");
 
     return 0;
 }
